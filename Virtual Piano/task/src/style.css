@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(#48b5, #17ba) no-repeat;
+    background-size: contain;
+}
+
+.container {
+    align-items: center;
+    /*border: solid black 1px;/**/
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    margin: auto;
+    width: 70vh;
+}
+
+kbd {
+    border: solid black 2px;
+    background: white;
+    display: inline-block;
+    height: 30vh;
+    text-align: center;
+    width: 9vh;
+}
