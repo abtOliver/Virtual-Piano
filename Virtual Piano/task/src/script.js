@@ -1,4 +1,9 @@
 document.addEventListener("keypress", function (e) {
+    function play(key) {
+        let aSound = new Audio("resources/" + key + ".mp3");
+        aSound.play();
+    }
+
     switch (e.code) {
         case "KeyA":
         case "KeyS":
@@ -7,6 +12,7 @@ document.addEventListener("keypress", function (e) {
         case "KeyG":
         case "KeyH":
         case "KeyJ":
+            play(e.key.toUpperCase());
             console.log("The '" + e.key.toUpperCase() + "' key is pressed.");
             break
         default:
