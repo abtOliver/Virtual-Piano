@@ -4,6 +4,11 @@ document.addEventListener("keypress", function (e) {
         aSound.play();
     }
 
+    /* workaround for German keyboard layout */
+    let key = e.code === "KeyY"
+        ? "y"
+        : e.key;
+
     switch (e.code) {
         case "KeyA":
         case "KeyS":
@@ -12,10 +17,15 @@ document.addEventListener("keypress", function (e) {
         case "KeyG":
         case "KeyH":
         case "KeyJ":
-            play(e.key.toUpperCase());
-            console.log("The '" + e.key.toUpperCase() + "' key is pressed.");
+        case "KeyW":
+        case "KeyE":
+        case "KeyT":
+        case "KeyY":
+        case "KeyU":
+            play(key.toUpperCase());
+            console.log("The '" + key.toUpperCase() + "' key is pressed.");
             break
         default:
-            console.log("Unbound key '" + e.key.toUpperCase() + "' is pressed.");
+            console.log("Unbound key '" + key.toUpperCase() + "' is pressed.");
     }
 });

@@ -4,20 +4,50 @@ body {
 }
 
 .container {
-    align-items: center;
-    /*border: solid black 1px;/**/
-    display: flex;
     height: 95vh;
-    justify-content: center;
     margin: auto;
+    position: relative;
+    top: 30vh;
     width: 70vh;
 }
 
-kbd {
+.white-keys,
+.black-keys {
+    display: flex;
+}
+
+.white-keys {
+    position: relative;
+    z-index: 0;
+}
+
+.black-keys {
+    left: 4.5vh;
+    position: relative;
+    top: -30.5vh;
+    z-index: 1;
+}
+
+.white-keys kbd {
     border: solid black 2px;
     background: white;
     display: inline-block;
     height: 30vh;
     text-align: center;
     width: 9vh;
+}
+
+.black-keys kbd {
+    border-bottom: solid white 2px;
+    color: white;
+    background: black;
+    display: inline-block;
+    height: 20vh;
+    margin: 0 1.8vh;
+    text-align: center;
+    width: 6vh;
+}
+
+.black-keys kbd:nth-child(2) {
+    margin-right: 10.8vh;
 }
